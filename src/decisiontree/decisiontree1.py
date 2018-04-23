@@ -7,8 +7,7 @@ Created on 2018年4月21日
 import operator
 
 '''
-    二分类决策树，包含m个属性，每个属性都只有0-1两种值，
-    一个0-1标签值
+    多分类决策树，包含m个属性，每个属性可包含若干个属性值
 '''
 import math;
 
@@ -142,11 +141,11 @@ def loadTree(fname):
     return pickle.load(fr);
 
 def test():
-    data=[[1,0,0],
+    data=[[1,0,2],
           [3,0,0],
           [3,1,1],
           [1,1,1],
-          [2,1,0],
+          [2,1,2],
           [2,0,1]]
 #     print(calH(data));
 #     print(splitDataset(data,1, 2))

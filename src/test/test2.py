@@ -12,7 +12,8 @@ b = np.array([1,2,3]);
 a = np.array(a);
 
 
-
+c = np.array([4,5,6]);
+print(np.vstack((b,c)));
 
 
 if __name__ == '__main__':

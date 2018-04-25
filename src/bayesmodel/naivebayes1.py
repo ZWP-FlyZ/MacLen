@@ -16,6 +16,10 @@ Created on 2018年4月23日
 
 import numpy as np;
 
+
+
+
+
 def trainNaiveBayes(featMat,labelList,correction=True):
     '''
     训练贝叶斯模型
@@ -70,17 +74,17 @@ def classify(p0Vect,p1Vect,p1,testVect):
 
 def test():
     f = [[0,0,0],#1
-         [0,0,1],#0
+         [0,0,1],#1
          [0,1,0],#1
          [0,1,1],#1
-         [1,0,0],#0
-         [1,0,1],#1
-         [1,1,0]]#0
-    l = [1,0,1,1,
-         0,1,0]
-    nb_model = trainNaiveBayes(f,l,True);
-    print(nb_model);
-    print(classify(*nb_model,[0,1,0]));
+         [1,0,0],#1
+         [1,0,1],#0
+         [1,1,0],
+         [1,1,1]]#0
+    l = [1,1,1,1,
+         1,0,0,1]
+    nb_model = trainNaiveBayes(f,l);
+    print(classify(*nb_model,[1,0,1]));
     pass;
 
 
